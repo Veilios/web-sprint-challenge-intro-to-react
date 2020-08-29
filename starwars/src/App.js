@@ -18,11 +18,23 @@ const App = () => {
     axios.
     get(`https://rickandmortyapi.com/api/character`)
     .then((res) => {
-      console.log("Res", res.data);
+      console.log("Character Res: ", res.data);
       setChar(res.data.results);
       setLocation(char.map(e => {
 
       }))
+    })
+    .catch((err) => {
+      console.log("Error Occurred", err);
+    })
+  }, []);
+
+  useEffect(() => {
+    axios
+    .get(`https://rickandmortyapi.com/api/location`)
+    .then((res) => {
+      console.log("Location Res:", res.data);
+      setLocation(res.data.results);
     })
     .catch((err) => {
       console.log("Error Occurred", err);
@@ -35,7 +47,8 @@ const App = () => {
       <div className="Content">
         {char.map(char => {
           return (
-            <Character key={char.id} name={char.name} image={char.image} status={char.status} species={char.species}/>);
+            <Character key={char.id} name={char.name} image={char.image} status={char.status} 
+            species={char.species} location={location.name} />);
         })}
       </div>
     </div>
