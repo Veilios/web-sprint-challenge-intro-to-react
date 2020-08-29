@@ -9,12 +9,12 @@ import {
 const Character = (props) => {
   return (
     <div>
-      <Card>
+      <Card className="Card">
         <CardImg top width="100%" src={props.image} alt="Card image cap" />
         <CardBody>
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>{props.status} - {props.species}</CardSubtitle>
-          <CardText>Last known location:</CardText>
+          <CardText>Last known location: </CardText>
           <Button color="primary">Button</Button>
         </CardBody>
       </Card>

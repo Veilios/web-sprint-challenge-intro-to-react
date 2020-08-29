@@ -6,3 +6,17 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.Content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5rem;
+  margin-bottom: 5rem;
+}
+
+.Card {
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+}
