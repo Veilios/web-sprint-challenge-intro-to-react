@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Character from './components/Character'
+import Character from './components/Character';
 import './App.css';
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
     get(`https://rickandmortyapi.com/api/character`)
     .then((res) => {
       console.log("Res", res.data);
-      setChar(res.data);
+      setChar(res.data.results);
     })
     .catch((err) => {
       console.log("Error Occurred", err);
@@ -28,9 +28,11 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {char.map(char => {
-        return <Character name={char.name}/>
-      })}
+      <div>
+        {char.map(char => {
+          return <Character key={char.id} name={char.name} image={char.image} status={char.status} species={char.species} />
+        })}
+      </div>
     </div>
   );
 }
