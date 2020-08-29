@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Character from './components/Character';
-import { Container, Row, Col} from 'reactstrap';
 import './App.css';
 
 const App = () => {
@@ -35,7 +34,8 @@ const App = () => {
       <h1 className="Header">Characters</h1>
       <div className="Content">
         {char.map(char => {
-          return <Character key={char.id} name={char.name} image={char.image} status={char.status} species={char.species} />
+          return (
+            <Character key={char.id} name={char.name} image={char.image} status={char.status} species={char.species}/>);
         })}
       </div>
     </div>
