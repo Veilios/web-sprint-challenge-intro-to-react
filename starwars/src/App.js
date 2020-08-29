@@ -8,36 +8,20 @@ const App = () => {
   // the state properties here.
 
   const [char, setChar] = useState([]);
-  const [location, setLocation] = useState([]);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
   useEffect(() => {
-    axios.
-    get(`https://rickandmortyapi.com/api/character`)
+    axios
+    .get(`https://rickandmortyapi.com/api/character`)
     .then((res) => {
       console.log("Character Res: ", res.data);
       setChar(res.data.results);
-      setLocation(char.map(e => {
-
-      }))
     })
     .catch((err) => {
-      console.log("Error Occurred", err);
-    })
-  }, []);
-
-  useEffect(() => {
-    axios
-    .get(`https://rickandmortyapi.com/api/location`)
-    .then((res) => {
-      console.log("Location Res:", res.data);
-      setLocation(res.data.results);
-    })
-    .catch((err) => {
-      console.log("Error Occurred", err);
+      console.log("Character Error Occurred: ", err);
     })
   }, []);
 
@@ -48,7 +32,7 @@ const App = () => {
         {char.map(char => {
           return (
             <Character key={char.id} name={char.name} image={char.image} status={char.status} 
-            species={char.species} location={location.name} />);
+            species={char.species} gender={char.gender}/>);
         })}
       </div>
     </div>

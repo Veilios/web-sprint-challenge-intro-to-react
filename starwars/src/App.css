@@ -21,6 +21,6 @@
   padding: 0.5rem;
 }
 
-#Green {
-  color: green;
+html {
+  line-height: 3rem;
 }
