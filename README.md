@@ -30,11 +30,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React Js is a javascript library that is used for building elements on a website that are more interactive, and user interfaces. Before web developers had to create user interfaces by hand, and would lead to longer development times, and more oportunity's for bugs. React JS fixes all this.
+
 1. Describe component state.
+
+State is an object that decides how a component behaves. State is managed within the state.
 
 1. Describe props.
 
+Props is sort of like state, but it is passed to the component.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are anything that affects something outside the scope of a functiion that is executed. To sync effects in a React component, you use the Effect hook.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -42,29 +50,29 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-- [ ] Push commits: `git push origin <firstName-lastName>`
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [Done] Create a forked copy of this project
+- [Done] Add your team lead as collaborator on Github
+- [Done] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [Done] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [Done] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
+- [Done] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
+- [Done] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [Done] Push commits: `git push origin <firstName-lastName>`
+- [Done] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [Done] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use ONE of the following APIs:
+- [Done] Use ONE of the following APIs:
   - [Star Wars API](https://swapi.dev/)
   - [Alternate Star Wars API](https://swapi.py4e.com/)
   - [The Rick and Morty API](https://rickandmortyapi.com/)
   - [The RESTful Pokémon API](https://pokeapi.co/) (**harder**)
-- [ ] Use the documentation and Google to learn how to fetch characters from your API.
-- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
-- [ ] Set the list of characters into state.
+- [Done] Use the documentation and Google to learn how to fetch characters from your API.
+- [Done] Obtain a list of characters. One or several requests might be needed, depending on the API.
+- [Done] Set the list of characters into state.
 - [ ] Render your characters to the screen:
   - Build a React component named 'Character' to render an individual character.
   - Map over the list in state, and for each character render a Character to the page.
